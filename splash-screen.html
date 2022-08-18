@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="splash-screen.css" rel="stylesheet">
+</head>
+<body>
+     
+	 <div  style="background-image: url(); width: 100%; margin:auto; background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: centers;"> 
+		<img src="images/splashlogo.png" alt="Dairy System" class="logo">
+
+    	<!--progress bar start-->
+		<div class="progress-bar">
+			<span style="width:100%; height: 100%;"></span>
+		</div>
+	 </div>
+	
+		<!--progress bar end-->
+
+		<script type="text/javascript">
+		$(function(){
+			$("span").each(function(){
+				$(this)
+				.data("origWidth", $(this).width())
+				.width(0)
+				.animate({
+					width: $(this).data("origWidth")
+				},2000);
+			});
+		});
+		</script>
+
+</body>
+<!--<div class="loader"></div>-->
+</html>

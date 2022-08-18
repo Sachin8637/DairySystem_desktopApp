@@ -1,0 +1,111 @@
+body {
+  background-color: #3f3fe2;
+  background-image: url('images/splashbg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.flex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+  .loader {
+      border: 5px solid rgba(18, 65, 145, 255);
+      border-radius: 50%;
+      border-top: 5px solid #f6e7e7;
+      width: 40px;
+      height: 40px;
+      -webkit-animation: spin 1s linear infinite;
+      /* Safari */
+      animation: spin 1s linear infinite;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0px;
+      bottom: 0;
+      position: fixed;
+  }
+
+  /* Safari */
+  /*@-webkit-keyframes spin {
+      0% {
+          -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+          -webkit-transform: rotate(360deg);
+      }
+  }
+
+  @keyframes spin {
+      0% {
+          transform: rotate(0deg);
+      }
+
+      100% {
+          transform: rotate(360deg);
+      }
+  }*/
+
+  .center {
+      border: none !important;
+      text-align: center;
+  }
+.logo{
+  width: 250px;
+  height: 325px;
+  margin-left: 40%;
+  margin-right: 50%;
+  margin-top: 20%;
+  margin-bottom: 0%;
+}
+.progress-bar{
+  background: #555;
+  width: 250px;
+  height: 10px;
+  /*position: relative;*/
+  margin-left: 40%;
+  margin-right: 50%;
+  margin-top: 0%;
+  margin-bottom: 40%;
+  border-radius: 25px;
+  padding: 4px;
+}
+
+.progress-bar span{
+  background: #5670e4;
+  display: block;
+  height: 100%;
+  border-radius: 25px;
+  position: relative;
+}
+
+.progress-bar span:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+    color-stop(.25, rgba(255, 255, 255, .2)),
+    color-stop(.25, transparent),
+    color-stop(.5, transparent),
+    color-stop(.5, rgba(255, 255, 255, .2)),
+    color-stop(.75, rgba(255, 255, 255, .2)),
+    color-stop(.75, transparent), to(transparent)
+    );
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-radius: 25px;
+}
+@-webkit-keyframes move{
+  0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 50% 50%;
+  }
+}
