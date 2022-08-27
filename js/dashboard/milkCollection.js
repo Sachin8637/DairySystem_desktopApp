@@ -66,7 +66,7 @@ let VendorRateData ;
 
             function handleClick() {
 
-              const inputs = document.querySelectorAll('#vendor_id, #vendorName,#milkCollectionCattleType ,#milkCollectionFat ,#milkCollectionSnf ,#milkCollectionWeight ,#milkCollectionRate ,#milkCollectionAmount');
+              const inputs = document.querySelectorAll('#vendorList, #vendorName,#milkCollectionCattleType ,#milkCollectionFat ,#milkCollectionSnf ,#milkCollectionWeight ,#milkCollectionRate ,#milkCollectionAmount');
 
               inputs.forEach(input => {
                 input.value = '';
@@ -74,6 +74,15 @@ let VendorRateData ;
             }
             $('button[type="submit"]').append(handleClick); 
 
+
+            
+
+            $(function() { 
+
+              $('#vendorList').focus();
+            })
+
+            
 
         // setTimeout(()=>{document.location.href = 'milk-collection.html'},2000)      
 

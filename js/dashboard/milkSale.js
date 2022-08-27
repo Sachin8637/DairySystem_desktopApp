@@ -61,13 +61,19 @@ $("#add-milk-sale").submit(async function(e) {
 //  For Making inputs blank (form)
             function handleClick() {
 
-              const inputs = document.querySelectorAll('#vendor_id, #vendorName,#milkSaleCattleType ,#milkSaleFat ,#milkSaleWeight ,#milkSaleRate ,#milkSaleAmount');
+              const inputs = document.querySelectorAll('#vendorList, #vendorName,#milkSaleCattleType ,#milkSaleFat ,#milkSaleWeight ,#milkSaleRate ,#milkSaleAmount');
 
               inputs.forEach(input => {
                 input.value = '';
               });
             }
             $('button[type="submit"]').append(handleClick);
+
+
+            $(function() { 
+
+              $('#vendorList').focus();
+            })
 
 
         // setTimeout(()=>{document.location.href = 'milk-sale.html'},2000)    

@@ -282,13 +282,14 @@
                                                 <option>Evening</option>
                                             </select>
                                         </div>
-                                       
+                                        
                                         <div class="col-md-2">
                                             <input type="text" name="vendor_id" style="visibility: hidden;display: none;" placeholder="" id="vendor_id" readonly>
                                             <label for="vendorCode" class="form-label">Vendor Code</label>
                                             
-                                            <input  id="vendorList" list="vendorListData" name="vendor_code" class="form-control input-rounded" id ="" searchable="Search here..">
+                                            <input  id="vendorList" tabindex="1" list="vendorListData" name="vendor_code"  class="form-control input-rounded" searchable="Search here.." autofocus>
                                                 <datalist id="vendorListData" >
+                                                    
                                                     
                                      
                                                 </datalist>
@@ -307,11 +308,11 @@
                                         
                                         <div class="col-md-2">
                                             <label for="milkCollectionFat" class="form-label">FAT</label>
-                                            <input type="number" min="2.0" max="12.0"  name="fat"  class="form-control input-rounded" placeholder="" id="milkCollectionFat" required onchange="document.getElementById('milkCollectionFat').min=this.value.max=this.value;"/>
+                                            <input type="number" tabindex="2" min="2.0" max="12.0"  name="fat"  class="form-control input-rounded" placeholder="" id="milkCollectionFat" required onchange="document.getElementById('milkCollectionFat').min=this.value.max=this.value;"/>
                                         </div>
                                         <div class="col-md-2">
                                             <label for="milkCollectionSnf" class="form-label">SNF</label>
-                                            <input type="number" min="2.0" max="10.0" name="snf" class="form-control input-rounded" placeholder="" id="milkCollectionSnf" required onchange="document.getElementById('milkCollectionSnf').min=this.value.max=this.value;"/>
+                                            <input type="number" tabindex="3" min="2.0" max="10.0" name="snf" class="form-control input-rounded" placeholder="" id="milkCollectionSnf" required onchange="document.getElementById('milkCollectionSnf').min=this.value.max=this.value;"/>
                                         </div>
                                         <!-- <div class="col-md-2">
                                             <label for="milkCollectionClr" class="form-label">CLR</label>
@@ -320,11 +321,12 @@
                                         
                                         <div class="col-md-2">
                                             <label for="milkCollectionWeight" class="form-label">Weight</label>
-                                            <input type="text" name="weight" class="form-control input-rounded" placeholder="" id="milkCollectionWeight" required>
+                                            <input type="text" tabindex="4" name="weight" class="form-control input-rounded" placeholder="" id="milkCollectionWeight" required>
                                         </div>
+                                     
                                         <div class="col-md-1">
                                             <label></label>
-                                            <select name="unit" class="form-control input-rounded" id="sel1">
+                                            <select name="unit"  class="form-control input-rounded" id="sel1">
                                                 <option>Kg</option>
                                                 <option>Ltr</option>
                                             </select>
@@ -342,7 +344,7 @@
                                         
                                         
                                         <div class="col-lg-12">
-                                        <button type="submit" id="btn" class="btn btn-primary" style="float: right;">Save</button>
+                                        <button type="submit" tabindex="5" id="btn" class="btn btn-primary" style="float: right;">Save</button>
                                         </div>
                                     </form>
                                 </div>
@@ -361,7 +363,7 @@
                                         <div class="button-icon" style="float: right;">
                                             <p>Export to</p>
                                             
-                                            <button type="button" onclick="downloadFile()" class="btn mb-1 btn-rounded btn-primary"><span class="btn-icon-left"><i class="fa fa-shopping-cart color-primary"></i> </span>PDF</button>
+                                            <button type="button" tabindex="6" onclick="downloadFile()" class="btn mb-1 btn-rounded btn-primary"><span class="btn-icon-left"><i class="fa fa-shopping-cart color-primary"></i> </span>PDF</button>
                                         <!-- <button type="button" class="btn mb-1 btn-rounded btn-info"><span class="btn-icon-left"><i class="fa fa-plus color-info"></i> </span>CSV</button> -->
                                         <!-- <button onclick="deleteMilkCollection()"  type="button" class="btn mb-1 btn-rounded btn-danger"><span class="btn-icon-left"><i class="fa fa-envelope color-danger"></i> </span>Delete</button> -->
                                         </div>

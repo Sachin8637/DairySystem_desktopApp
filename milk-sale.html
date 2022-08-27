@@ -290,7 +290,7 @@
                                             <input type="text" name="vendor_id" style="visibility: hidden;display: none;" placeholder="" id="vendor_id" readonly>
                                             <label for="vendorCode" class="form-label">Vendor Code</label>
                                             
-                                            <input  id="vendorList" list="vendorListData" name="vendor_code" class="form-control input-rounded" id ="" searchable="Search here..">
+                                            <input  id="vendorList" tabindex="1" list="vendorListData" name="vendor_code" class="form-control input-rounded" id ="" searchable="Search here.." autofocus>
                                                 <datalist id="vendorListData" >
                                                     
                                      
@@ -311,12 +311,12 @@
                                         
                                         <div class="col-md-2">
                                             <label for="milkSaleFat" class="form-label">FAT</label>
-                                            <input type="text" name="fat" class="form-control input-rounded" placeholder="" id="milkSaleFat" required>
+                                            <input type="text" tabindex="2" name="fat" class="form-control input-rounded" placeholder="" id="milkSaleFat" required>
                                         </div>
                                         
                                         <div class="col-md-2">
                                             <label for="milkSaleWeight" class="form-label">Weight</label>
-                                            <input type="text" name="weight" class="form-control input-rounded" placeholder="" id="milkSaleWeight" required>
+                                            <input type="text" tabindex="3" name="weight" class="form-control input-rounded" placeholder="" id="milkSaleWeight" required>
                                         </div>
                                         <div class="col-md-1">
                                             <label></label>
@@ -327,7 +327,7 @@
                                         </div>
                                         <div class="col-md-2">
                                             <label for="milkSaleRate" class="form-label">Rate</label>
-                                            <input type="text" name="rate" class="form-control input-rounded" placeholder="" id="milkSaleRate" required>
+                                            <input type="text" tabindex="4" name="rate" class="form-control input-rounded" placeholder="" id="milkSaleRate" required>
                                         </div>
                                         <div class="col-md-2">
                                             <label for="milkSaleAmount" class="form-label">Amount</label>
@@ -338,7 +338,7 @@
                                         
                                         
                                         <div class="col-lg-12">
-                                        <button type="submit" class="btn btn-primary" style="float: right;">Save</button>
+                                        <button type="submit" tabindex="5" class="btn btn-primary" style="float: right;">Save</button>
                                         </div>
                                     </form>
                                 </div>
@@ -357,7 +357,7 @@
                                         <div class="button-icon" style="float: right;">
                                             <p>Export to</p>
                                             
-                                            <button type="button" onclick="downloadFile()" class="btn mb-1 btn-rounded btn-primary"><span class="btn-icon-left"><i class="fa fa-shopping-cart color-primary"></i> </span>PDF</button>
+                                            <button type="button" tabindex="6" onclick="downloadFile()" class="btn mb-1 btn-rounded btn-primary"><span class="btn-icon-left"><i class="fa fa-shopping-cart color-primary"></i> </span>PDF</button>
                                         <!-- <button type="button" class="btn mb-1 btn-rounded btn-info"><span class="btn-icon-left"><i class="fa fa-plus color-info"></i> </span>CSV</button>
                                         <button type="button" class="btn mb-1 btn-rounded btn-danger"><span class="btn-icon-left"><i class="fa fa-envelope color-danger"></i> </span>Delete</button>
                                          -->
