@@ -10805,6 +10805,13 @@ svg.pulse-svg .third-circle {
   margin-top: 0;
   height: 100%;
 }
+.header-just-right{
+  float: right;
+  line-height: 3rem;
+  margin-top: 0;
+  margin-right: 20px;
+  height: 100%; 
+}
 .header-right ul {
   height: 100%;
   margin: 0;

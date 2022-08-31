@@ -91,7 +91,7 @@ let addVendorTableRow =(data) =>{
         
         <td>${data.vendor_code}</td>
         <td>${data.vendor_name}</td>
-        <td>${data.avgFat}</td>
+        <td>${parseFloat(data.avgFat/data.totalWeight).toFixed(2)}</td>
         <td>${data.totalWeight}</td>
         <td>${data.totalAmount}</td>
         

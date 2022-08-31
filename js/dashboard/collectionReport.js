@@ -36,7 +36,7 @@ let ShowMilkCollection = function(milkCollectionData){
           
         throw new Error(response.message)})
   }).then((responseJson)=>{
-    let {count, rows , vendor_data, totalAmount, totalWeight ,avgFat} = responseJson.data;  
+    let {count, rows , vendor_data, totalAmount, totalWeight ,avgFat ,avgSnf} = responseJson.data;  
       $('#milkCollectionRecord').DataTable().destroy();
 
      $("#milkCollectionRecord > tbody").empty();
@@ -46,11 +46,13 @@ let ShowMilkCollection = function(milkCollectionData){
 
      $('#vendorRecords').DataTable().destroy();
      $("#vendorRecords > tbody").empty();
-   
+     
+     
        
      let recordsTable = `<tr><td>${totalWeight}</td>
      <td>${totalAmount}</td>
-     <td>${avgFat}</td></tr>`
+     <td>${avgFat}</td>
+     <td>${avgSnf}</td></tr>`
 
 $("#totalRecordCount").find('tbody').append(recordsTable);
       rows.forEach((row =>{
@@ -60,8 +62,12 @@ $("#totalRecordCount").find('tbody').append(recordsTable);
       
       }))
       
+      
       vendor_data.forEach((row =>{
+    
         let newRow= addVendorTableRow(row)
+
+        
     
           $("#vendorRecords").find('tbody').append(newRow)
       
@@ -89,7 +95,8 @@ $("#totalRecordCount").find('tbody').append(recordsTable);
           
           <td>${data.vendor_code}</td>
           <td>${data.vendor_name}</td>
-          <td>${data.avgFat}</td>
+          <td>${parseFloat(data.avgFat/data.totalWeight).toFixed(2)}</td>
+          <td>${parseFloat(data.avgSnf/data.totalWeight).toFixed(2)}</td>
           <td>${data.totalWeight}</td>
           <td>${data.totalAmount}</td>
           
